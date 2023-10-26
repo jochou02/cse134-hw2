@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>John's Portfolio Site</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="John Chou">
+        <meta name="description" content="John's Portfolio page">
+        <meta name="keywords" content="Computer Science, Portfolio, John Chou, Projects, Programming, Code, Software Engineering, Web Development, Machine Learning, Algorithms">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            body {
+                background-color : rgb(209, 214, 246);
+            }
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <h1>Hi, I'm John</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+        <aside>
+            <table>
+                <caption>My Languages</caption>
+                <colgroup>
+                    <col style="background-color : rgb(255, 161, 161)">
+                    <col style="background-color : rgb(139, 255, 160)">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Language</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>8/10</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>6/10</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>9/10</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>9/10</td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td>8/10</td>
+                    </tr>
+                    <tr>
+                        <td>C++</td>
+                        <td>8/10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </aside>
+        
+        <main>
+
+            <section>
+                <h2>About Me</h2>
+                <p>Hi! I'm <strong>John Chou</strong>, a computer science student and aspiring <span style="color : rgb(192, 82, 82)">software engineer.</span></p>
+                <pre>
+                    def hello():
+                        print('Hello!') 
+                </pre>
+                <figure>
+                    <img src="pfp.png" alt="John's profile picture">
+                    <figcaption>I'm John, nice to meet you!</figcaption>
+                </figure>
+                <iframe src="mysite.pdf" title="Where I'm from"></iframe>
+                <h3>My Hobbies</h3>
+                <ul>
+                    <li>Basketball</li>
+                    <li>Poker</li>
+                    <li>Gaming</li>
+                </ul>
+                <h3>My Favorite TV Shows</h3>
+                <ol>
+                    <li>The Boys</li>
+                    <li>Suits</li>
+                    <li>The Office</li>
+                </ol>
+                <h3>FAQ</h3>
+                <details>
+                    <summary>What is my favorite programming language?</summary>
+                    <p>Haskell</p>
+                </details>
+                <details>
+                    <summary>What is my favorite food?</summary>
+                    <p>Reverse seared USDA Prime Ribeye steaks (there <em>is</em> a difference how you cook it!)</p>
+                    <audio controls>
+                        <source src="steak.mp3" type="audio/mpeg">
+                        Sorry, your browser does not support this feature
+                    </audio>
+                </details>
+                <p>Here is a rectangle of my favorite color!</p>
+                <canvas id="myCanvas">
+                    Sorry, your browser does not support this feature
+                </canvas>
+                <script>
+                    let canvas = document.getElementById("myCanvas");
+                    let ctx = canvas.getContext("2d");
+                    ctx.fillStyle = "#6DF3D9";
+                    ctx.fillRect(0, 0, 80, 80);
+                </script>
+                <p>This is my favorite shape!</p>
+                <svg>
+                    <circle cx="50" cy="50" r="40"/>
+                </svg>
+            </section>
+            
+            <section>
+                <h2>Projects</h2>
+                <div>
+                    <h3>This website</h3>
+                    <p>This project utilizes <code>HTML</code>, <code>CSS</code>, and <code>JavaScript</code>.</p>
+                    <picture>
+                        <source media="(min-width:700px)" srcset="page1.jpg">
+                        <source media="(min-width:400px)" srcset="page2.jpg">
+                        <img src="page3.jpg" alt="Wireframe of this website">
+                    </picture>
+                </div>
+                <hr>
+                <div>
+                    <h3>Poker Game</h3>
+                    <p>This project simulates a poker game and involves <i>complex</i> data structures and algorithms.</p>
+                    <video controls>
+                        <source src="proj_video.mp4" type="video/mp4">
+                        Sorry, your browser does not support this feature
+                    </video>
+                </div>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <form>
+                    <fieldset>
+                        <legend>Contact Me!</legend>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                        <br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                        <br>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message"></textarea>
+                        <br>
+                        <label for="language">What is your favorite programming language?</label>
+                        <input list="languages" name="language" id="language">
+                        <datalist id="languages">
+                            <option value="Python">
+                            <option value="JS">
+                            <option value="Java">
+                            <option value="C++">
+                            <option value="C">
+                        </datalist>
+                        <br>
+                        <label for="priority">Priority:</label>
+                        <select id="priority" name="priority">
+                            <optgroup label="High">
+                                <option value="urgent">Urgent</option>
+                            </optgroup>
+                            <optgroup label="Medium">
+                                <option value="normal">Normal</option>
+                            </optgroup>
+                            <optgroup label="Low">
+                                <option value="later">Can Wait</option>
+                            </optgroup>
+                        </select>
+                        <br>
+                        <button type="submit">Send</button>
+                    </fieldset>
+                </form>
+            </section>
+            
+        </main>
+        
+        <footer>
+            <template>
+                <p>This is a hidden easter egg!</p>
+            </template>
+            <p><b>Thank you for visiting my website!</b></p>
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+        </footer>
+        
+    </body>
+</html>
